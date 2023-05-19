@@ -1,11 +1,18 @@
 from pyrogram import filters, Client, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from pyrogram.errors import UserNotParticipant
+import random
 from bot import UPDATE_CHANNEL
 
 from bot import Translation, LOGGER # pylint: disable=import-error
 from bot.database import Database # pylint: disable=import-error
 
 db = Database()
+
+UPDATE_CHANNEL = "the_aecr"
+
+PICS = [
+ "https://telegra.ph/file/7eaf2d02e14e9ca78edae.jpg"
 
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
@@ -68,9 +75,9 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text=Translation.START_TEXT.format(update.from_user.first_name),
+    await bot.send_photo(
+        photo=random.choice(PICS),
+        caption=Translation.START_TEXT.format(update.from_user.first_name),
         reply_markup=reply_markup,
         parse_mode=enums.ParseMode.HTML,
         reply_to_message_id=update.id
@@ -88,9 +95,9 @@ async def help(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text=Translation.HELP_TEXT,
+    await bot.send_photo(
+        photo=random.choice(PICS),
+        caption=Translation.HELP_TEXT,
         reply_markup=reply_markup,
         parse_mode=enums.ParseMode.HTML,
         reply_to_message_id=update.id
@@ -108,11 +115,10 @@ async def about(bot, update):
         ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text=Translation.ABOUT_TEXT,
+    await bot.send_photo(
+        photo=random.choice(PICS),
+        caption=Translation.ABOUT_TEXT,
         reply_markup=reply_markup,
-        disable_web_page_preview=True,
         parse_mode=enums.ParseMode.HTML,
         reply_to_message_id=update.id
     )
