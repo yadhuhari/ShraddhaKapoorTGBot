@@ -15,6 +15,13 @@ INVITE_LINK = {}
 ACTIVE_CHATS = {}
 db = Database()
 
+PICS = [
+ "https://telegra.ph/file/fd2676c5859891d20a9b4.jpg",
+ "https://telegra.ph/file/dd2b32c9330d239741a64.jpg",
+ "https://telegra.ph/file/9c8684202600f671f5a67.jpg",
+ "https://telegra.ph/file/958a33c7c16598eec03ce.jpg"
+]
+
 @Bot.on_message(filters.text & filters.group, group=0)
 async def auto_filter(bot, update):
     """
@@ -202,9 +209,13 @@ async def auto_filter(bot, update):
         reply_markup = InlineKeyboardMarkup(result[0])
 
         try:
-            await bot.send_message(
-                chat_id = update.chat.id,
-                text=f"<u>Results Availbale....</u>",  #FOUND RESULT
+            await bot.reply_photo(
+                photo=random.choice(PICS),
+                caption=f"""ʜᴇʏ {update.from_user.mention} 👋
+                
+                ʜᴇʀᴇ ɪꜱ ᴡʜᴀᴛ ɪ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ꜱᴇᴀʀᴄʜ : <code>{query}</code>
+                
+                @Pirate_Cinemas_Group"""
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML,
                 reply_to_message_id=update.id
