@@ -212,8 +212,7 @@ async def auto_filter(bot, update):
         try:
             await bot.reply_photo(
                 photo=random.choice(PICS),
-                caption=f"""ʜᴇʏ {update.from_user.mention},
-                
+                caption=f"""ʜᴇʏ
                 ʜᴇʀᴇ ɪꜱ ᴡʜᴀᴛ ɪ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ꜱᴇᴀʀᴄʜ : <code>{query}</code>
                 
                 @Pirate_Cinemas_Group"""
