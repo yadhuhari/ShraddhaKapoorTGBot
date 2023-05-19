@@ -12,7 +12,11 @@ db = Database()
 UPDATE_CHANNEL = "the_aecr"
 
 PICS = [
- "https://telegra.ph/file/7eaf2d02e14e9ca78edae.jpg"
+ "https://telegra.ph/file/fd2676c5859891d20a9b4.jpg",
+ "https://telegra.ph/file/dd2b32c9330d239741a64.jpg",
+ "https://telegra.ph/file/9c8684202600f671f5a67.jpg",
+ "https://telegra.ph/file/958a33c7c16598eec03ce.jpg"
+]
 
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
@@ -75,7 +79,7 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_photo(
+    await bot.reply_photo(
         photo=random.choice(PICS),
         caption=Translation.START_TEXT.format(update.from_user.first_name),
         reply_markup=reply_markup,
@@ -95,7 +99,7 @@ async def help(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_photo(
+    await bot.reply_photo(
         photo=random.choice(PICS),
         caption=Translation.HELP_TEXT,
         reply_markup=reply_markup,
@@ -115,7 +119,7 @@ async def about(bot, update):
         ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_photo(
+    await bot.reply_photo(
         photo=random.choice(PICS),
         caption=Translation.ABOUT_TEXT,
         reply_markup=reply_markup,
