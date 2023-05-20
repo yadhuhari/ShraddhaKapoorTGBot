@@ -48,6 +48,8 @@ For More Details Click Help Button Below..
     
 <b>➥ Creator</b> : <b><i><a href="https://t.me/JACKEY_07">Jackey TG</a></i></b>
 
+<b>➥ Developer</b> : <b><i><a href="https://t.me/TheEvil_HK">ᴍʀ ᴇᴠɪʟ</a></i></b>
+
 <b>➥ Language</b> : <code>Python3</code>
 
 <b>➥ Library</b> : <i><a href="https://docs.pyrogram.org">Pyrogram V2 </a></i>
