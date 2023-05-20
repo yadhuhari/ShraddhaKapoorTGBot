@@ -9,7 +9,7 @@ from bot.database import Database # pylint: disable=import-error
 
 db = Database()
 
-UPDATE_CHANNEL = "the_aecr"
+UPDATE_CHANNEL = "TheEvilHK"
 
 PICS = [
  "https://telegra.ph/file/fd2676c5859891d20a9b4.jpg",
