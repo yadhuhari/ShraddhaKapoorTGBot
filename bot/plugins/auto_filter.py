@@ -214,9 +214,14 @@ async def auto_filter(bot, update):
             await update.reply_photo(
                 photo=random.choice(PICS),
                 caption=f"""ʜᴇʏ {update.from_user.mention} 🙌
-                ʜᴇʀᴇ ɪꜱ ᴡʜᴀᴛ ɪ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ꜱᴇᴀʀᴄʜ : <code>{query}</code>
                 
-                @Pirate_Cinemas_Group""",
+ʜᴇʀᴇ ɪꜱ ᴡʜᴀᴛ ɪ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ꜱᴇᴀʀᴄʜ
+
+ᴛɪᴛʟᴇ        : <code>{query}</code>
+ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ : {update.from_user.mention}
+ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ  : @Pirate_Cinemas_Group
+
+ᴡᴀᴛᴄʜ ᴀɴᴅ ᴇɴᴊᴏʏ 😍""",
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML,
                 reply_to_message_id=update.id
