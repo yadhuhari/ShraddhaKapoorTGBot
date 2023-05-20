@@ -21,12 +21,12 @@ PICS = [
 async def start(bot, update):
     if force_channel:
         try:
-            user = await client.get_chat_member(force_channel, message.from_user.id)
+            user = await bot.get_chat_member(force_channel, update.from_user.id)
             if user.status == "kicked out":
-                await message.reply_text("You Are Banned")
+                await update.reply_text("You Are Banned")
                 return
         except UserNotParticipant :
-            await message.reply_text(
+            await update.reply_text(
                 text="🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 🤭.\n\nനിങ്ങൾക്ക് മൂവീസ് വേണോ? എങ്കിൽ തായെ കാണുന്ന ഞങ്ങളുടെ മെയിൻ ചാനലിൽ ജോയിൻ ചെയ്യുക.😂\nഎന്നിട്ട് ഗ്രൂപ്പിൽ പോയി വീണ്ടും മൂവിയിൽ ക്ലിക് ചെയ്ത് start കൊടുത്തു നോക്കൂ..!😁",
                 reply_markup=InlineKeyboardMarkup( [[
                  InlineKeyboardButton("🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 🤭", url=f"t.me/{force_channel}")
