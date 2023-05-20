@@ -210,7 +210,7 @@ async def auto_filter(bot, update):
         reply_markup = InlineKeyboardMarkup(result[0])
 
         try:
-            await bot.reply_photo(
+            await update.reply_photo(
                 photo=random.choice(PICS),
                 caption=f"""ʜᴇʏ {update.from_user.mention} 🙌
                 ʜᴇʀᴇ ɪꜱ ᴡʜᴀᴛ ɪ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ꜱᴇᴀʀᴄʜ : <code>{query}</code>
