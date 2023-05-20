@@ -33,7 +33,7 @@ async def start(bot, update):
                  ]]
                  )
             )
-            return,
+            return
    
     try:
         file_uid = update.command[1]
