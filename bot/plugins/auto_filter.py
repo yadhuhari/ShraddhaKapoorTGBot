@@ -212,10 +212,10 @@ async def auto_filter(bot, update):
         try:
             await bot.reply_photo(
                 photo=random.choice(PICS),
-                caption=f"""ʜᴇʏ
+                caption=f"""ʜᴇʏ {update.from_user.mention} 🙌
                 ʜᴇʀᴇ ɪꜱ ᴡʜᴀᴛ ɪ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ꜱᴇᴀʀᴄʜ : <code>{query}</code>
                 
-                @Pirate_Cinemas_Group"""
+                @Pirate_Cinemas_Group""",
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML,
                 reply_to_message_id=update.id
