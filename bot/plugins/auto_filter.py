@@ -4,9 +4,7 @@ import asyncio
 
 from pyrogram import Client, filters, enums
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-import random
 from pyrogram.errors import ButtonDataInvalid, FloodWait
-
 
 from bot.database import Database # pylint: disable=import-error
 from bot.bot import Bot # pylint: disable=import-error
@@ -16,22 +14,6 @@ FIND = {}
 INVITE_LINK = {}
 ACTIVE_CHATS = {}
 db = Database()
-
-PICS = [
- "https://telegra.ph/file/fd2676c5859891d20a9b4.jpg",
- "https://telegra.ph/file/dd2b32c9330d239741a64.jpg",
- "https://telegra.ph/file/9c8684202600f671f5a67.jpg",
- "https://telegra.ph/file/958a33c7c16598eec03ce.jpg"
-]
-
-RESULT_TEXT = """ʜᴇʏ {} 🙌
-ʜᴇʀᴇ ɪꜱ ᴡʜᴀᴛ ɪ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ꜱᴇᴀʀᴄʜ
-
-ᴛɪᴛʟᴇ        : <code>{}</code>
-ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ : {}
-ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ  : @TheHRZTG
-
-ᴡᴀᴛᴄʜ ᴀɴᴅ ᴇɴᴊᴏʏ 😍"""
 
 @Bot.on_message(filters.text & filters.group, group=0)
 async def auto_filter(bot, update):
@@ -46,8 +28,7 @@ async def auto_filter(bot, update):
     if ("https://" or "http://") in update.text:
         return
     
-    query = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|br((o|u)h?)*|^h(e|a)?(l)*(o)*|mal(ayalam)?|t(h)?amil|file|that|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(u)?(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle(s)?)",
-        "", update.text) # Targetting Only 1000 - 2999 😁
+    query = re.sub(r"[1-2]\d{3}", "", update.text) # Targetting Only 1000 - 2999 😁
     
     if len(query) < 2:
         return
@@ -220,16 +201,15 @@ async def auto_filter(bot, update):
         reply_markup = InlineKeyboardMarkup(result[0])
 
         try:
-            await update.reply_photo(
+            await bot.reply_photo(
                 photo=random.choice(PICS),
-                caption=RESULT_TEXT.format(update.from_user.mention, query, update.from_user.mention),
+                caption="""Hey
+HERE IS WHAT I FOUND FOR YOUR QUERY
 
-
-
-
-
-
-
+💠 TITLE        : <code>{query}</code>
+💠 NO. OF FILES : {(len_results)}
+💠 REQUESTED BY : {update.from_user.mention}
+💠 POWERED BY   : [ʜᴋᴢ 🇮🇳](t.me/TheHRZTG)""",
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML,
                 reply_to_message_id=update.id
@@ -243,7 +223,7 @@ async def auto_filter(bot, update):
 
 
 async def gen_invite_links(db, group_id, bot, update):
-    
+    """
     A Funtion To Generate Invite Links For All Active 
     Connected Chats In A Group
     """
@@ -311,4 +291,3 @@ async def recacher(group_id, ReCacheInvite=True, ReCacheActive=False, bot=Bot, u
             
             ACTIVE_CHATS[str(group_id)] = achatId
     return 
-
