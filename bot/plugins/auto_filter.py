@@ -211,7 +211,7 @@ async def auto_filter(bot, update):
         try:
             await update.reply_photo(
                 photo=random.choice(PICS),
-                caption="""Hey
+                caption=f"""Hey
 HERE IS WHAT I FOUND FOR YOUR QUERY
 
 💠 TITLE        : <code>{query}</code>
