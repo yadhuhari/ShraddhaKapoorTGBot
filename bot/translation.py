@@ -2,14 +2,12 @@
 
 class Translation(object):
     
-    START_TEXT = """<b>Hey {}!!</b>
-<i>Am Just A Advance Auto Filter Bot....😉
+    START_TEXT = """Hello {}
+I am [Kareena Kapoor](t.me/HRZKareenaRobot), A Powerful Telegram Bot created for [HRZ Group](t.me/TheHRZTG).
+Only authorized people can be use me. So don't waste your time dear 😄
 
-Just Add Me To Your Group And Channel And Connect Them And See My Pevers 🔥🔥😝
+@TheHRZTG"""
 
-For More Details Click Help Button Below..
-@Jackey_07
-</i>"""    
     
     HELP_TEXT = """
 <b><i><u>How To Use Me!?</u></i></b>
@@ -41,21 +39,21 @@ For More Details Click Help Button Below..
             
             -> <code>Status</code> - Button Will Shows The Stats Of Your Channel
             
-@Jackey_07
+@TheHRZTG
 """
     
-    ABOUT_TEXT = """<b>➥ Name</b> : <a href=https://t.me/MYFILTER_ROBOT>𝑺𝒆𝒕𝒉𝒖𝒑𝒂𝒕𝒉𝒊⚡️</a>
+    ABOUT_TEXT = """<b>➥ Name</b> : <a href=https://t.me/HRZKareenaRobot>Kareena Kapoor</a>
     
-<b>➥ Creator</b> : <b><i><a href="https://t.me/JACKEY_07">Jackey TG</a></i></b>
+  : <b><i><a href="https://t.me/HRZRobot">HRZ 🇮🇳</a></i></b>
 
-<b>➥ Developer</b> : <b><i><a href="https://t.me/TheEvil_HK">ᴍʀ ᴇᴠɪʟ</a></i></b>
 
-<b>➥ Language</b> : <code>Python3</code>
+
+ Language</b> : <code>Python3</code>
 
 <b>➥ Library</b> : <i><a href="https://docs.pyrogram.org">Pyrogram V2 </a></i>
 
 <b>➥ Source Code</b> : <b> Join @the_aecr and pm @jackey_07 </b>
-"""
+
 
     STATUS_TEXT = """★ Total Files: {}
 ★ Using Storage: {} MB
