@@ -24,6 +24,15 @@ PICS = [
  "https://telegra.ph/file/958a33c7c16598eec03ce.jpg"
 ]
 
+RESULT_TEXT = """ʜᴇʏ {} 🙌
+ʜᴇʀᴇ ɪꜱ ᴡʜᴀᴛ ɪ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ꜱᴇᴀʀᴄʜ
+
+ᴛɪᴛʟᴇ        : <code>{}</code>
+ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ : {}
+ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ  : @TheHRZTG
+
+ᴡᴀᴛᴄʜ ᴀɴᴅ ᴇɴᴊᴏʏ 😍"""
+
 @Bot.on_message(filters.text & filters.group, group=0)
 async def auto_filter(bot, update):
     """
@@ -213,14 +222,14 @@ async def auto_filter(bot, update):
         try:
             await update.reply_photo(
                 photo=random.choice(PICS),
-                caption=f"""ʜᴇʏ {update.from_user.mention} 🙌
-ʜᴇʀᴇ ɪꜱ ᴡʜᴀᴛ ɪ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ꜱᴇᴀʀᴄʜ
+                caption=RESULT_TEXT.format(update.from_user.mention, query, update.from_user.mention),
 
-ᴛɪᴛʟᴇ        : <code>{query}</code>
-ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ : {update.from_user.mention}
-ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ  : @Pirate_Cinemas_Group
 
-ᴡᴀᴛᴄʜ ᴀɴᴅ ᴇɴᴊᴏʏ 😍""",
+
+
+
+
+
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML,
                 reply_to_message_id=update.id
@@ -234,7 +243,7 @@ async def auto_filter(bot, update):
 
 
 async def gen_invite_links(db, group_id, bot, update):
-    """
+    
     A Funtion To Generate Invite Links For All Active 
     Connected Chats In A Group
     """
