@@ -161,7 +161,7 @@ async def auto_filter(bot, update):
         
         # Just A Decaration
         result[0].append([
-            InlineKeyboardButton(f"🔰 Page 1/{len_result if len_result < max_pages else max_pages} 🔰", callback_data="ignore")
+            InlineKeyboardButton(f"🔷 Page 1/{len_result if len_result < max_pages else max_pages} 🔷", callback_data="ignore")
         ])
         
         
@@ -209,7 +209,7 @@ async def auto_filter(bot, update):
         reply_markup = InlineKeyboardMarkup(result[0])
 
         try:
-            await bot.reply_photo(
+            await update.reply_photo(
                 photo=random.choice(PICS),
                 caption="""Hey
 HERE IS WHAT I FOUND FOR YOUR QUERY
