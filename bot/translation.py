@@ -2,11 +2,9 @@
 
 class Translation(object):
     
-    START_TEXT = """Hello {}
-I am [Kareena Kapoor](t.me/HRZKareenaRobot), A Powerful Telegram Bot created for [HRZ Group](t.me/TheHRZTG).
-Only authorized people can be use me. So don't waste your time dear 😄
-
-@TheHRZTG"""
+    START_TEXT = """Hey {} 👋
+    
+𝖬𝗒 𝖭𝖺𝗆𝖾 𝗂𝗌 [𝖱𝖾𝗌𝗆𝗂 𝖱 𝖭𝖺𝗂𝗋 🦋](t.me/CCResmiBot), 𝖨 𝖺𝗆 𝖺𝗇 𝖠𝖽𝗏𝖺𝗇𝖼𝖾𝖽 𝖠𝗎𝗍𝗈 𝖥𝗂𝗅𝗍𝖾𝗋 𝖡𝗈𝗍 𝗐𝗈𝗋𝗄𝗂𝗇𝗀 𝖿𝗈𝗋 [𝖢𝗂𝗇𝖾𝗆𝖺 𝖢𝖺𝖿𝖾 🦋](t.me/CC_LinkzzTG). 𝖸𝗈𝗎 𝖼𝖺𝗇 𝖺𝗅𝗌𝗈 𝗎𝗌𝖾 𝗆𝖾, 𝖩𝗎𝗌𝗍 𝖺𝖽𝖽 𝗆𝖾 𝗍𝗈 𝗒𝗈𝗎𝗋 𝗀𝗋𝗈𝗎𝗉 𝖺𝗇𝖽 𝖾𝗇𝗃𝗈𝗒 😍"""
 
     
     HELP_TEXT = """
@@ -39,16 +37,14 @@ Only authorized people can be use me. So don't waste your time dear 😄
             
             -> <code>Status</code> - Button Will Shows The Stats Of Your Channel
             
-@TheHRZTG
+👨‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 : [×‌× 𝙼𝚛. 𝙷𝙺𝚉 𝚃𝙶 🇮🇳࿐](t.me/MR_HKZ_TG)
 """
     
-    ABOUT_TEXT = """➥ Name   : [Kareena Kapoor](t.me/HRZKareenaRobot)
-➥ Developer : [HRZ 🇮🇳](t.me/HRZRobot)   
-➥ Updates   : [HRZ TG](t.me/TheHRZTG)
-➥ Language  : [Python3](www.python.org)
-➥ Library   : [Pyrogram](www.pyrogram.org)
-➥ Database  : [Mango DB](www.mangodb.com)
-➥ Server    : [Render](www.render.com)"""
+    ABOUT_TEXT = """🤖 𝖬𝗒 𝖭𝖺𝗆𝖾 : [𝖱𝖾𝗌𝗆𝗂 𝖱 𝖭𝖺𝗂𝗋 🦋](t.me/CCResmiBot)
+👨‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 : [×‌× 𝙼𝚛. 𝙷𝙺𝚉 𝚃𝙶 🇮🇳࿐](t.me/MR_HKZ_TG)
+♻️ 𝖬𝖺𝗂𝗇𝗍𝖺𝗂𝗇𝖾𝖽 𝖡𝗒 : [𝖢𝗂𝗇𝖾𝗆𝖺 𝖢𝖺𝖿𝖾 🦋](t.me/CC_LinkzzTG)
+🌐 𝖡𝗈𝗍 𝖲𝖾𝗋𝗏𝖾𝗋 : [𝖱𝖾𝗇𝖽𝖾𝗋](https://render.com)
+📃 𝖲𝗈𝗎𝗋𝖼𝖾 𝖢𝗈𝖽𝖾 : [𝖠𝗌𝗄 𝗁𝗂𝗆 🛡](t.me/MR_HKZ_TG)"""
     
 
 
