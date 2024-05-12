@@ -17,10 +17,9 @@ ACTIVE_CHATS = {}
 db = Database()
 
 PICS = [
- "https://telegra.ph/file/fd2676c5859891d20a9b4.jpg",
- "https://telegra.ph/file/dd2b32c9330d239741a64.jpg",
- "https://telegra.ph/file/9c8684202600f671f5a67.jpg",
- "https://telegra.ph/file/958a33c7c16598eec03ce.jpg"
+ "https://telegra.ph/file/aa3ad8175457f8100aae9.jpg",
+ "https://telegra.ph/file/4097b118f1d4bc42c3132.jpg",
+ "https://telegra.ph/file/60722fcd75b589584c300.jpg"
 ]
 
 @Bot.on_message(filters.text & filters.group, group=0)
@@ -211,13 +210,15 @@ async def auto_filter(bot, update):
         try:
             await update.reply_photo(
                 photo=random.choice(PICS),
-                caption=f"""Hey
-HERE IS WHAT I FOUND FOR YOUR QUERY
+                caption=f"""𝖧𝖾𝗒 {update.from_user.mention} 👋,
 
-💠 TITLE        : <code>{query}</code>
-💠 NO. OF FILES : {(len_results)}
-💠 REQUESTED BY : {update.from_user.mention}
-💠 POWERED BY   : [ʜᴋᴢ 🇮🇳](t.me/TheHRZTG)""",
+𝖧𝖾𝗋𝖾 𝗂𝗌 𝖶𝗁𝖺𝗍 𝖨 𝖿𝗈𝗎𝗇𝖽 𝖿𝗈𝗋 𝗒𝗈𝗎𝗋 𝖰𝗎𝖾𝗋𝗒 😍
+
+🎬 𝖳𝗂𝗍𝗅𝖾 : <code>{query}</code>
+📁 𝖭𝗈. 𝖮𝖿 𝖥𝗂𝗅𝖾𝗌 : {(len_results)}
+📢 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝖾𝖽 𝖡𝗒 : {update.from_user.mention}
+
+🎯 𝖴𝗉𝗅𝗈𝖺𝖽𝖾𝖽 : [𝖱𝖾𝗌𝗆𝗂 𝖱 𝖭𝖺𝗂𝗋 🦋](t.me/CCResmiBot)""",
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML,
                 reply_to_message_id=update.id
