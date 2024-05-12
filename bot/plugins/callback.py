@@ -1588,7 +1588,7 @@ async def cb_about(bot, update: CallbackQuery):
     text+=f"\n<b><i>Bot About:</i></b> <i>Power Full</i>"
 
     buttons = [[
-            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/wudixh13/4')
+            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/MR_HKZ_TG')
         ], [
             InlineKeyboardButton('Home ⚡', callback_data='start'),
             InlineKeyboardButton("🔙 Back", callback_data="settings")
@@ -1620,7 +1620,15 @@ async def callback_data(bot, update: CallbackQuery):
         
         await update.message.edit_text(
             Translation.START_TEXT.format(update.from_user.mention),
-            reply_markup=reply_markup,
+            reply_markup=InlineKeyboardMarkup( [[
+                InlineKeyboardButton("𝖠𝖽𝖽 𝗆𝖾 𝗍𝗈 𝗒𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 🎗", url="http://t.me/CCResmiBot?startgroup=true"),
+                ],[
+                InlineKeyboardButton("👨‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", url="t.me/MR_HKZ_TG"),
+                InlineKeyboardButton("𝖩𝗈𝗂𝗇 𝖿𝗈𝗋 𝖬𝗈𝗏𝗂𝖾𝗌 🌀", url="https://t.me/CCGroupOfficial"),
+                ],[
+                InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 🤠", callback_data="ABOUT")
+                ]]
+                ),
             parse_mode=enums.ParseMode.HTML,
             disable_web_page_preview=True
         )
