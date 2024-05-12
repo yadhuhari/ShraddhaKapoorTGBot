@@ -8,14 +8,15 @@ from bot.database import Database # pylint: disable=import-error
 
 db = Database()
 
-force_channel = "TheHRZTG"
+force_channel = "CC_LinkzzTG"
 
 PICS = [
- "https://telegra.ph/file/fd2676c5859891d20a9b4.jpg",
- "https://telegra.ph/file/dd2b32c9330d239741a64.jpg",
- "https://telegra.ph/file/9c8684202600f671f5a67.jpg",
- "https://telegra.ph/file/958a33c7c16598eec03ce.jpg"
+ "https://telegra.ph/file/aa3ad8175457f8100aae9.jpg",
+ "https://telegra.ph/file/4097b118f1d4bc42c3132.jpg",
+ "https://telegra.ph/file/60722fcd75b589584c300.jpg"
 ]
+
+ADMINS = "6979830303"
 
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
@@ -56,7 +57,7 @@ async def start(bot, update):
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=InlineKeyboardMarkup(
                         [[
-                            InlineKeyboardButton('💕Main Channel❤', url="https://t.me/The_HRZTG")
+                            InlineKeyboardButton('𝖩𝗈𝗂𝗇 𝖿𝗈𝗋 𝖬𝗈𝗏𝗂𝖾𝗌 🌀', url="https://t.me/CCGroupOfficial")
                         ]]
                 ))
         except Exception as e:
@@ -67,11 +68,12 @@ async def start(bot, update):
         photo=random.choice(PICS),
         caption=Translation.START_TEXT.format(update.from_user.first_name),
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ", url="t.me/TheHRZTG"),
+            InlineKeyboardButton("𝖠𝖽𝖽 𝗆𝖾 𝗍𝗈 𝗒𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 🎗", url="http://t.me/CCResmiBot?startgroup=true"),
             ],[
-            InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="t.me/HRZRobot"),
+            InlineKeyboardButton("👨‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", url="t.me/MR_HKZ_TG"),
+            InlineKeyboardButton("𝖩𝗈𝗂𝗇 𝖿𝗈𝗋 𝖬𝗈𝗏𝗂𝖾𝗌 🌀", url="https://t.me/CCGroupOfficial"),
             ],[
-            InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url="t.me/HRZSupport")
+            InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 🤠", callback_data="about")
             ]]
             ),
         parse_mode=enums.ParseMode.HTML,
@@ -79,7 +81,7 @@ async def start(bot, update):
     )
 
 
-@Client.on_message(filters.command(["help"]) & filters.private, group=1)
+@Client.on_message(filters.command(["help"]) & filters.user(ADMINS), group=1)
 async def help(bot, update):
     buttons = [[
             InlineKeyboardButton('🏡ʜᴏᴍᴇ', callback_data='start'),
@@ -103,10 +105,10 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-            InlineKeyboardButton('Oᴡɴᴇʀ👤', url='https://t.me/HRZRobot')
+            InlineKeyboardButton('👨‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋', url='https://t.me/MR_HKZ_TG')
         ], [
             InlineKeyboardButton('🏡ʜᴏᴍᴇ', callback_data='start'),
-            InlineKeyboardButton('ʙᴀᴄᴋ👈', callback_data='help')
+            InlineKeyboardButton('ʙᴀᴄᴋ👈', callback_data='start')
         ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
