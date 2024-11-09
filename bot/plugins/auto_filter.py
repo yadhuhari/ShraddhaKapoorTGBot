@@ -4,7 +4,6 @@ import asyncio
 
 from pyrogram import Client, filters, enums
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-import random
 from pyrogram.errors import ButtonDataInvalid, FloodWait
 
 from bot.database import Database # pylint: disable=import-error
@@ -15,12 +14,6 @@ FIND = {}
 INVITE_LINK = {}
 ACTIVE_CHATS = {}
 db = Database()
-
-PICS = [
- "https://telegra.ph/file/aa3ad8175457f8100aae9.jpg",
- "https://telegra.ph/file/4097b118f1d4bc42c3132.jpg",
- "https://telegra.ph/file/60722fcd75b589584c300.jpg"
-]
 
 @Bot.on_message(filters.text & filters.group, group=0)
 async def auto_filter(bot, update):
@@ -88,7 +81,7 @@ async def auto_filter(bot, update):
             file_size = "" if file_size == ("[0 B]") else file_size
             
             # add emoji down below inside " " if you want..
-            button_text = f"{file_size}{file_name}"
+            button_text = f"@PrimeXLinkzz•{file_size}{file_name}"
             
 
             if file_type == "video":
@@ -154,13 +147,13 @@ async def auto_filter(bot, update):
         if len_result != 1:
             result[0].append(
                 [
-                    InlineKeyboardButton("Next ⏩", callback_data=f"navigate(0|next|{query})")
+                    InlineKeyboardButton("Nᴇxᴛ ⏩", callback_data=f"navigate(0|next|{query})")
                 ]
             )
         
         # Just A Decaration
         result[0].append([
-            InlineKeyboardButton(f"🔷 Page 1/{len_result if len_result < max_pages else max_pages} 🔷", callback_data="ignore")
+            InlineKeyboardButton(f"🔷 Pᴀɢᴇ 1/{len_result if len_result < max_pages else max_pages} 🔷", callback_data="ignore")
         ])
         
         
@@ -218,7 +211,9 @@ async def auto_filter(bot, update):
 📁 𝖭𝗈. 𝖮𝖿 𝖥𝗂𝗅𝖾𝗌 : {(len_results)}
 📢 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝖾𝖽 𝖡𝗒 : {update.from_user.mention}
 
-🎯 𝖴𝗉𝗅𝗈𝖺𝖽𝖾𝖽 : [𝖱𝖾𝗌𝗆𝗂 𝖱 𝖭𝖺𝗂𝗋 🦋](t.me/CCResmiBot)""",
+🎯 𝖴𝗉𝗅𝗈𝖺𝖽𝖾𝖽 : [Pʀɪᴍᴇ Lɪɴᴋᴢᴢ ✨](t.me/PrimeXLinlzz)
+
+""",
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML,
                 reply_to_message_id=update.id
