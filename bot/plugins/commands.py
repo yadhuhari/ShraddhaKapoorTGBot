@@ -71,12 +71,12 @@ async def start(bot, update):
         photo=random.choice(PICS),
         caption=Translation.START_TEXT.format(update.from_user.first_name),
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("𝖠𝖽𝖽 𝗆𝖾 𝗍𝗈 𝗒𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 🎗", url="http://t.me/CCResmiBot?startgroup=true"),
+            InlineKeyboardButton("Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✨", url="t.me/PrimeXLinkzz"),
             ],[
-            InlineKeyboardButton("👨‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", url="t.me/MR_HKZ_TG"),
-            InlineKeyboardButton("𝖩𝗈𝗂𝗇 𝖿𝗈𝗋 𝖬𝗈𝗏𝗂𝖾𝗌 🌀", url="https://t.me/CCGroupOfficial"),
+            InlineKeyboardButton("Hᴇʟᴘ ⚙️", callback_data="help"),
+            InlineKeyboardButton("Aʙᴏᴜᴛ 🤠", callback_data="about"),
             ],[
-            InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 🤠", callback_data="about")
+            InlineKeyboardButton("Dᴇᴠᴇʟᴏᴘᴇʀ 💀", url="t.me/YourPrimeTG")
             ]]
             ),
         parse_mode=enums.ParseMode.HTML,
@@ -87,10 +87,10 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]), group=1)
 async def help(bot, update):
     buttons = [[
-            InlineKeyboardButton('🏡 ʜᴏᴍᴇ', callback_data='start'),
+            InlineKeyboardButton('🏡 Hᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('Aʙᴏᴜᴛ 🖥', callback_data='about')
         ],[
-            InlineKeyboardButton('🔐 ᴄʟᴏsᴇ', callback_data='close')
+            InlineKeyboardButton('⛔ Cʟᴏsᴇ', callback_data='close')
         ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
