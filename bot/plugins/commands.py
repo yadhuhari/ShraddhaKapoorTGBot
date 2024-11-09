@@ -8,19 +8,15 @@ from bot.database import Database # pylint: disable=import-error
 
 db = Database()
 
-force_channel = "CC_LinkzzTG"
+force_channel = "PrimeXLinkzz"
 
 PICS = [
- "https://telegra.ph/file/aa3ad8175457f8100aae9.jpg",
- "https://telegra.ph/file/4097b118f1d4bc42c3132.jpg",
- "https://telegra.ph/file/60722fcd75b589584c300.jpg"
+ "http://ibb.co/JxXKMPm",
+ "http://ibb.co/kgH9s5M",
+ "http://ibb.co/JH1Db24",
+ "http://ibb.co/9TjvrPW",
+ "http://ibb.co/N9cjbR7"
 ]
-
-VID = [
- "https://telegra.ph/file/63ce3b5e900b31f1600d4.mp4"
-]
-
-ADMINS = "6979830303"
 
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
@@ -31,11 +27,10 @@ async def start(bot, update):
                 await update.reply_text("You Are Banned")
                 return
         except UserNotParticipant :
-            await update.reply_video(
-                video=random.choice(VID),
-                caption="🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 🤭.\n\nനിങ്ങൾക്ക് മൂവീസ് വേണോ? എങ്കിൽ തായെ കാണുന്ന ഞങ്ങളുടെ മെയിൻ ചാനലിൽ ജോയിൻ ചെയ്യുക.😂\nഎന്നിട്ട് ഗ്രൂപ്പിൽ പോയി വീണ്ടും മൂവിയിൽ ക്ലിക് ചെയ്ത് start കൊടുത്തു നോക്കൂ..!😁",
+            await update.reply_text(
+                text="Sᴏʀʀy Dᴜᴅᴇ Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ My Cʜᴀɴɴᴇʟ 😐. Sᴏ Pʟᴇᴀꜱᴇ Jᴏɪɴ Oᴜʀ Uᴩᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Cᴄᴏɴᴛɪɴᴜᴇ",
                 reply_markup=InlineKeyboardMarkup( [[
-                 InlineKeyboardButton("🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 🤭", url=f"t.me/{force_channel}")
+                 InlineKeyboardButton("🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹", url=f"t.me/{force_channel}")
                  ]]
                  )
             )
@@ -52,13 +47,16 @@ async def start(bot, update):
         if (file_id or file_type) == None:
             return
      #CUSTOM FILE CAPTION   
-        caption = f""" 📂 <em>File Name</em>: <code>HRZ TG | {file_name} </code> \n\n🖇 <em>File Size</em>: <code> {file_size} </code>"""
+        caption = f"""<code> {file_name} </code>
+       
+<b> ✨ Jᴏɪɴ Nᴏᴡ [Pʀɪᴍᴇ Lɪɴᴋᴢᴢ ✨](t.me/PrimeXLinkzz) </b>"""
         
         try:
             await update.reply_cached_media(
                 file_id,
                 quote=True,
                 caption = caption,
+                thumb="http://ibb.co/m8T9L4K",
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=InlineKeyboardMarkup(
                         [[
@@ -86,13 +84,13 @@ async def start(bot, update):
     )
 
 
-@Client.on_message(filters.command(["help"]) & filters.user(ADMINS), group=1)
+@Client.on_message(filters.command(["help"]), group=1)
 async def help(bot, update):
     buttons = [[
-            InlineKeyboardButton('🏡ʜᴏᴍᴇ', callback_data='start'),
-            InlineKeyboardButton('Aʙᴏᴜᴛ🖥', callback_data='about')
+            InlineKeyboardButton('🏡 ʜᴏᴍᴇ', callback_data='start'),
+            InlineKeyboardButton('Aʙᴏᴜᴛ 🖥', callback_data='about')
         ],[
-            InlineKeyboardButton('🔐ᴄʟᴏsᴇ', callback_data='close')
+            InlineKeyboardButton('🔐 ᴄʟᴏsᴇ', callback_data='close')
         ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -110,7 +108,7 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-            InlineKeyboardButton('👨‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋', url='https://t.me/MR_HKZ_TG')
+            InlineKeyboardButton('👨‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋', url='https://t.me/YourPrimeTG')
         ], [
             InlineKeyboardButton('🏡ʜᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('ʙᴀᴄᴋ👈', callback_data='start')
