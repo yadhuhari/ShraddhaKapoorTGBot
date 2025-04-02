@@ -49,18 +49,18 @@ async def start(bot, update):
      #CUSTOM FILE CAPTION   
         caption = f"""<code> {file_name} </code>
        
-<b> ✨ Jᴏɪɴ Nᴏᴡ [Pʀɪᴍᴇ Lɪɴᴋᴢᴢ ✨](t.me/PrimeXLinkzz) </b>"""
+<b> ✨ Jᴏɪɴ Nᴏᴡ [Mallu Cartoonzz ✨](t.me/MalluCartoonzz) </b>"""
         
         try:
             await update.reply_cached_media(
                 file_id,
                 quote=True,
                 caption = caption,
-                thumb="http://ibb.co/m8T9L4K",
+                thumb="http://postimg.cc/Y4jcDrMQ",
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=InlineKeyboardMarkup(
                         [[
-                            InlineKeyboardButton('𝖩𝗈𝗂𝗇 𝖿𝗈𝗋 𝖬𝗈𝗏𝗂𝖾𝗌 🌀', url="https://t.me/CCGroupOfficial")
+                            InlineKeyboardButton('𝖩𝗈𝗂𝗇 𝖿𝗈𝗋 𝖬𝗈𝗏𝗂𝖾𝗌 🌀', url="https://t.me/MalluCartoonzz")
                         ]]
                 ))
         except Exception as e:
@@ -71,12 +71,12 @@ async def start(bot, update):
         photo=random.choice(PICS),
         caption=Translation.START_TEXT.format(update.from_user.first_name),
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✨", url="t.me/PrimeXLinkzz"),
+            InlineKeyboardButton("Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✨", url="t.me/MalluCartoonzz"),
             ],[
             InlineKeyboardButton("Hᴇʟᴘ ⚙️", callback_data="help"),
             InlineKeyboardButton("Aʙᴏᴜᴛ 🤠", callback_data="about"),
             ],[
-            InlineKeyboardButton("Dᴇᴠᴇʟᴏᴘᴇʀ 💀", url="t.me/YourPrimeTG")
+            InlineKeyboardButton("Dᴇᴠᴇʟᴏᴘᴇʀ 💀", url="t.me/MR_TONY_99")
             ]]
             ),
         parse_mode=enums.ParseMode.HTML,
@@ -108,7 +108,7 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-            InlineKeyboardButton('👨‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋', url='https://t.me/YourPrimeTG')
+            InlineKeyboardButton('👨‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋', url='https://t.me/MR_TONY_99')
         ], [
             InlineKeyboardButton('🏡ʜᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('ʙᴀᴄᴋ👈', callback_data='start')
