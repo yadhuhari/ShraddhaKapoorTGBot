@@ -211,7 +211,7 @@ async def auto_filter(bot, update):
 📁 𝖭𝗈. 𝖮𝖿 𝖥𝗂𝗅𝖾𝗌 : {(len_results)}
 📢 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝖾𝖽 𝖡𝗒 : {update.from_user.mention}
 
-🎯 𝖴𝗉𝗅𝗈𝖺𝖽𝖾𝖽 : [Pʀɪᴍᴇ Lɪɴᴋᴢᴢ ✨](t.me/PrimeXLinlzz)
+🎯 𝖴𝗉𝗅𝗈𝖺𝖽𝖾𝖽 : [Mallu Cartoonzz ✨](t.me/MalluCartoonzz)
 
 """,
                 reply_markup=reply_markup,
