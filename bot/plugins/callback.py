@@ -21,6 +21,9 @@ from bot.database import Database # pylint: disable=import-error
 
 db = Database()
 
+PICS = [
+ "http://postimg.cc/5HK6dFb2"
+]
 
 @Client.on_callback_query(filters.regex(r"navigate\((.+)\)"), group=2)
 async def cb_navg(bot, update: CallbackQuery):
@@ -1588,7 +1591,7 @@ async def cb_about(bot, update: CallbackQuery):
     text+=f"\n<b><i>Bot About:</i></b> <i>Power Full</i>"
 
     buttons = [[
-            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/MR_HKZ_TG')
+            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/MR_TONY_99')
         ], [
             InlineKeyboardButton('Home ⚡', callback_data='start'),
             InlineKeyboardButton("🔙 Back", callback_data="settings")
@@ -1608,29 +1611,25 @@ async def callback_data(bot, update: CallbackQuery):
     query_data = update.data
 
     if query_data == "start":
-        buttons = [[
-                    InlineKeyboardButton('𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉', url=f"http://t.me/im_kuttu2_bot?startgroup=true")
-                ],[
-                    InlineKeyboardButton('Movie 𝖦𝗋𝗈𝗎𝗉', url='https://t.me/wudixh')
-                ],[
-                    InlineKeyboardButton('Help ⚙', callback_data="help")
-           ]]
-    
-        reply_markup = InlineKeyboardMarkup(buttons)
         
-        await update.message.edit_text(
-            Translation.START_TEXT.format(update.from_user.mention),
+        await update.message.edit_photo(
+            photo=random.choice(PICS),
+            caption=f"""
+<b> Hᴇʏ ᴛʜᴇʀᴇ {update.from_user.first_name} 👋,
+    
+Mʏ Nᴀᴍᴇ Is [Rᴀsʜᴍɪᴋᴀ Mᴀɴᴅᴀɴɴᴀ ✨](t.me/MalluRashmikaRobot)
+
+I Aᴍ ᴀ Mᴏᴠɪᴇ Pʀᴏᴠɪᴅɪɴɢ Mᴀᴄʜɪɴᴇ Fᴏʀ [Mᴀʟʟᴜ Lɪɴᴋᴢᴢ Gʀᴏᴜᴘs](t.me/MalluXLinkzz), Oɴʟʏ Aᴜᴛʜᴏʀɪᴢᴇᴅ Aᴅᴍɪɴs Cᴀɴ Usᴇ Mᴇ Sᴏ Dᴏɴ'ᴛ Wᴀsᴛᴇ Yᴏᴜʀ Tɪᴍᴇ 😁 
+
+Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ :- @MR_TONY_99 </b>""",
             reply_markup=InlineKeyboardMarkup( [[
-                InlineKeyboardButton("𝖠𝖽𝖽 𝗆𝖾 𝗍𝗈 𝗒𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 🎗", url="http://t.me/CCResmiBot?startgroup=true"),
-                ],[
                 InlineKeyboardButton("👨‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", url="t.me/MR_HKZ_TG"),
                 InlineKeyboardButton("𝖩𝗈𝗂𝗇 𝖿𝗈𝗋 𝖬𝗈𝗏𝗂𝖾𝗌 🌀", url="https://t.me/CCGroupOfficial"),
                 ],[
                 InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 🤠", callback_data="ABOUT")
                 ]]
                 ),
-            parse_mode=enums.ParseMode.HTML,
-            disable_web_page_preview=True
+            parse_mode=enums.ParseMode.HTML
         )
 
 
@@ -1644,8 +1643,13 @@ async def callback_data(bot, update: CallbackQuery):
     
         reply_markup = InlineKeyboardMarkup(buttons)
         
-        await update.message.edit_text(
-            Translation.HELP_TEXT,
+        await update.message.edit_photo(
+            photo=random.choice(PICS),
+            caption=f"""
+<b> Hᴇʏ {} 👋,
+
+Sᴇᴇ Yᴏᴜ Iɴ [Mᴀʟʟᴜ Lɪɴᴋᴢᴢ](t.me/MalluXLinkzz) കുട്ടാ..😁 </b>
+""",
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML,
             disable_web_page_preview=True
@@ -1661,7 +1665,14 @@ async def callback_data(bot, update: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            Translation.ABOUT_TEXT,
+            photo=random.choice(PICS),
+            caption=f"""<b>
+✯ Mʏ Nᴀᴍᴇ : [Rᴀsʜᴍɪᴋᴀ Mᴀɴᴅᴀɴɴᴀ ✨](t.me/MalluRashmikaRobot)
+✯ Dᴇᴠᴇʟᴏᴘᴇʀ : [Tᴏɴʏ Sᴛᴀʀᴋ](t.me/MR_TONY_99)
+✯ Lᴀɴɢᴜᴀɢᴇ : [Pʏᴛʜᴏɴ 3.13.0](www.python.org)
+✯ Lɪʙʀᴀʀʏ : [Pʏʀᴏɢʀᴀᴍ](https://docs.pyrogram.org/)
+✯ Sᴇʀᴠᴇʀ : [Sᴏᴍᴇᴡʜᴇʀᴇ](www.goandlearn.com)
+✯ Dᴀᴛᴀʙᴀsᴇ : [Mᴏɴɢᴏ DB](www.mongodb.com) </b>""",
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
