@@ -45,7 +45,7 @@ async def start(bot, update):
      #CUSTOM FILE CAPTION   
         caption = f"""<code> {file_name} </code>
        
-<b> ✨ Jᴏɪɴ Nᴏᴡ [Mallu Cartoonzz ✨](t.me/MalluCartoonzz) </b>"""
+<b> ✨ Jᴏɪɴ Nᴏᴡ [Mallu Linkzz ✨](t.me/MalluXLinkzz) </b>"""
         
         try:
             await update.reply_cached_media(
@@ -56,7 +56,7 @@ async def start(bot, update):
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=InlineKeyboardMarkup(
                         [[
-                            InlineKeyboardButton('𝖩𝗈𝗂𝗇 𝖿𝗈𝗋 𝖬𝗈𝗏𝗂𝖾𝗌 🌀', url="https://t.me/MalluCartoonzz")
+                            InlineKeyboardButton('𝖩𝗈𝗂𝗇 𝖿𝗈𝗋 𝖬𝗈𝗏𝗂𝖾𝗌 🌀', url="https://t.me/MalluXLinkzz")
                         ]]
                 ))
         except Exception as e:
@@ -101,7 +101,7 @@ async def help(bot, update):
     await update.reply_photo(
         photo=random.choice(PICS),
         caption=f"""
-<b> Hᴇʏ {} 👋,
+<b> Hᴇʏ 👋,
 
 Sᴇᴇ Yᴏᴜ Iɴ [Mᴀʟʟᴜ Lɪɴᴋᴢᴢ](t.me/MalluXLinkzz) കുട്ടാ..😁 </b>
 """,
