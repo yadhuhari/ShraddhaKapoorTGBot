@@ -8,14 +8,10 @@ from bot.database import Database # pylint: disable=import-error
 
 db = Database()
 
-force_channel = "MalluCartoonzz"
+force_channel = "MalluXLinkzz"
 
 PICS = [
- "http://ibb.co/JxXKMPm",
- "http://ibb.co/kgH9s5M",
- "http://ibb.co/JH1Db24",
- "http://ibb.co/9TjvrPW",
- "http://ibb.co/N9cjbR7"
+ "http://postimg.cc/5HK6dFb2"
 ]
 
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
@@ -69,9 +65,16 @@ async def start(bot, update):
         return
     await update.reply_photo(
         photo=random.choice(PICS),
-        caption=Translation.START_TEXT.format(update.from_user.first_name),
+        caption=f"""
+<b> Hᴇʏ ᴛʜᴇʀᴇ {update.from_user.first_name} 👋,
+    
+Mʏ Nᴀᴍᴇ Is [Rᴀsʜᴍɪᴋᴀ Mᴀɴᴅᴀɴɴᴀ ✨](t.me/MalluRashmikaRobot)
+
+I Aᴍ ᴀ Mᴏᴠɪᴇ Pʀᴏᴠɪᴅɪɴɢ Mᴀᴄʜɪɴᴇ Fᴏʀ [Mᴀʟʟᴜ Lɪɴᴋᴢᴢ Gʀᴏᴜᴘs](t.me/MalluXLinkzz), Oɴʟʏ Aᴜᴛʜᴏʀɪᴢᴇᴅ Aᴅᴍɪɴs Cᴀɴ Usᴇ Mᴇ Sᴏ Dᴏɴ'ᴛ Wᴀsᴛᴇ Yᴏᴜʀ Tɪᴍᴇ 😁 
+
+Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ :- @MR_TONY_99 </b>""",
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✨", url="t.me/MalluCartoonzz"),
+            InlineKeyboardButton("Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✨", url="t.me/MalluXLinkzz"),
             ],[
             InlineKeyboardButton("Hᴇʟᴘ ⚙️", callback_data="help"),
             InlineKeyboardButton("Aʙᴏᴜᴛ 🤠", callback_data="about"),
@@ -97,7 +100,11 @@ async def help(bot, update):
     
     await update.reply_photo(
         photo=random.choice(PICS),
-        caption=Translation.HELP_TEXT,
+        caption=f"""
+<b> Hᴇʏ {} 👋,
+
+Sᴇᴇ Yᴏᴜ Iɴ [Mᴀʟʟᴜ Lɪɴᴋᴢᴢ](t.me/MalluXLinkzz) കുട്ടാ..😁 </b>
+""",
         reply_markup=reply_markup,
         parse_mode=enums.ParseMode.HTML,
         reply_to_message_id=update.id
@@ -117,7 +124,13 @@ async def about(bot, update):
     
     await update.reply_photo(
         photo=random.choice(PICS),
-        caption=Translation.ABOUT_TEXT,
+        caption=f"""<b>
+✯ Mʏ Nᴀᴍᴇ : [Rᴀsʜᴍɪᴋᴀ Mᴀɴᴅᴀɴɴᴀ ✨](t.me/MalluRashmikaRobot)
+✯ Dᴇᴠᴇʟᴏᴘᴇʀ : [Tᴏɴʏ Sᴛᴀʀᴋ](t.me/MR_TONY_99)
+✯ Lᴀɴɢᴜᴀɢᴇ : [Pʏᴛʜᴏɴ 3.13.0](www.python.org)
+✯ Lɪʙʀᴀʀʏ : [Pʏʀᴏɢʀᴀᴍ](https://docs.pyrogram.org/)
+✯ Sᴇʀᴠᴇʀ : [Sᴏᴍᴇᴡʜᴇʀᴇ](www.goandlearn.com)
+✯ Dᴀᴛᴀʙᴀsᴇ : [Mᴏɴɢᴏ DB](www.mongodb.com) </b>""",
         reply_markup=reply_markup,
         parse_mode=enums.ParseMode.HTML,
         reply_to_message_id=update.id
