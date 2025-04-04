@@ -66,13 +66,13 @@ async def start(bot, update):
     await update.reply_photo(
         photo=random.choice(PICS),
         caption=f"""
-<b> Hᴇʏ ᴛʜᴇʀᴇ {update.from_user.first_name} 👋,
+Hᴇʏ ᴛʜᴇʀᴇ {update.from_user.first_name} 👋,
     
 Mʏ Nᴀᴍᴇ Is [Rᴀsʜᴍɪᴋᴀ Mᴀɴᴅᴀɴɴᴀ ✨](t.me/MalluRashmikaRobot)
 
 I Aᴍ ᴀ Mᴏᴠɪᴇ Pʀᴏᴠɪᴅɪɴɢ Mᴀᴄʜɪɴᴇ Fᴏʀ [Mᴀʟʟᴜ Lɪɴᴋᴢᴢ Gʀᴏᴜᴘs](t.me/MalluXLinkzz), Oɴʟʏ Aᴜᴛʜᴏʀɪᴢᴇᴅ Aᴅᴍɪɴs Cᴀɴ Usᴇ Mᴇ Sᴏ Dᴏɴ'ᴛ Wᴀsᴛᴇ Yᴏᴜʀ Tɪᴍᴇ 😁 
 
-Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ :- @MR_TONY_99 </b>""",
+Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ :- @MR_TONY_99""",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✨", url="t.me/MalluXLinkzz"),
             ],[
@@ -101,9 +101,9 @@ async def help(bot, update):
     await update.reply_photo(
         photo=random.choice(PICS),
         caption=f"""
-<b> Hᴇʏ 👋,
+Hᴇʏ 👋,
 
-Sᴇᴇ Yᴏᴜ Iɴ [Mᴀʟʟᴜ Lɪɴᴋᴢᴢ](t.me/MalluXLinkzz) കുട്ടാ..😁 </b>
+Sᴇᴇ Yᴏᴜ Iɴ [Mᴀʟʟᴜ Lɪɴᴋᴢᴢ](t.me/MalluXLinkzz) കുട്ടാ..😁
 """,
         reply_markup=reply_markup,
         parse_mode=enums.ParseMode.HTML,
@@ -124,13 +124,13 @@ async def about(bot, update):
     
     await update.reply_photo(
         photo=random.choice(PICS),
-        caption=f"""<b>
+        caption=f"""
 ✯ Mʏ Nᴀᴍᴇ : [Rᴀsʜᴍɪᴋᴀ Mᴀɴᴅᴀɴɴᴀ ✨](t.me/MalluRashmikaRobot)
 ✯ Dᴇᴠᴇʟᴏᴘᴇʀ : [Tᴏɴʏ Sᴛᴀʀᴋ](t.me/MR_TONY_99)
 ✯ Lᴀɴɢᴜᴀɢᴇ : [Pʏᴛʜᴏɴ 3.13.0](www.python.org)
 ✯ Lɪʙʀᴀʀʏ : [Pʏʀᴏɢʀᴀᴍ](https://docs.pyrogram.org/)
 ✯ Sᴇʀᴠᴇʀ : [Sᴏᴍᴇᴡʜᴇʀᴇ](www.goandlearn.com)
-✯ Dᴀᴛᴀʙᴀsᴇ : [Mᴏɴɢᴏ DB](www.mongodb.com) </b>""",
+✯ Dᴀᴛᴀʙᴀsᴇ : [Mᴏɴɢᴏ DB](www.mongodb.com)""",
         reply_markup=reply_markup,
         parse_mode=enums.ParseMode.HTML,
         reply_to_message_id=update.id
