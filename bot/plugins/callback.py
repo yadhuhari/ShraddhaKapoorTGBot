@@ -21,10 +21,6 @@ from bot.database import Database # pylint: disable=import-error
 
 db = Database()
 
-PICS = [
- "http://postimg.cc/5HK6dFb2"
-]
-
 @Client.on_callback_query(filters.regex(r"navigate\((.+)\)"), group=2)
 async def cb_navg(bot, update: CallbackQuery):
     """
@@ -1612,9 +1608,8 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         
-        await update.message.edit_photo(
-            photo=random.choice(PICS),
-            caption=f"""
+        await update.message.edit_text(
+            text=f"""
 <b> Hᴇʏ ᴛʜᴇʀᴇ {update.from_user.first_name} 👋,
     
 Mʏ Nᴀᴍᴇ Is [Rᴀsʜᴍɪᴋᴀ Mᴀɴᴅᴀɴɴᴀ ✨](t.me/MalluRashmikaRobot)
@@ -1643,9 +1638,8 @@ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ :- @MR_TONY_99 </b>""",
     
         reply_markup = InlineKeyboardMarkup(buttons)
         
-        await update.message.edit_photo(
-            photo=random.choice(PICS),
-            caption=f"""
+        await update.message.edit_text(
+            text=f"""
 <b> Hᴇʏ 👋,
 
 Sᴇᴇ Yᴏᴜ Iɴ [Mᴀʟʟᴜ Lɪɴᴋᴢᴢ](t.me/MalluXLinkzz) കുട്ടാ..😁 </b>
@@ -1665,8 +1659,7 @@ Sᴇᴇ Yᴏᴜ Iɴ [Mᴀʟʟᴜ Lɪɴᴋᴢᴢ](t.me/MalluXLinkzz) കുട്
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            photo=random.choice(PICS),
-            caption=f"""<b>
+            text=f"""<b>
 ✯ Mʏ Nᴀᴍᴇ : [Rᴀsʜᴍɪᴋᴀ Mᴀɴᴅᴀɴɴᴀ ✨](t.me/MalluRashmikaRobot)
 ✯ Dᴇᴠᴇʟᴏᴘᴇʀ : [Tᴏɴʏ Sᴛᴀʀᴋ](t.me/MR_TONY_99)
 ✯ Lᴀɴɢᴜᴀɢᴇ : [Pʏᴛʜᴏɴ 3.13.0](www.python.org)
