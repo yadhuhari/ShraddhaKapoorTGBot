@@ -1646,7 +1646,7 @@ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ :- @MR_TONY_99 </b>""",
         await update.message.edit_photo(
             photo=random.choice(PICS),
             caption=f"""
-<b> Hᴇʏ {} 👋,
+<b> Hᴇʏ 👋,
 
 Sᴇᴇ Yᴏᴜ Iɴ [Mᴀʟʟᴜ Lɪɴᴋᴢᴢ](t.me/MalluXLinkzz) കുട്ടാ..😁 </b>
 """,
