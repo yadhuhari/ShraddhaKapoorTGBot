@@ -52,7 +52,7 @@ async def start(bot, update):
                 file_id,
                 quote=True,
                 caption = caption,
-                thumb="http://postimg.cc/Y4jcDrMQ",
+                thumb="http://postimg.cc/DJW3LD97",
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=InlineKeyboardMarkup(
                         [[
